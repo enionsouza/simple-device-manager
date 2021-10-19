@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["prettier", "google"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "rules": {
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error"]
+  }
+}

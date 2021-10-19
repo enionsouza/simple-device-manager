@@ -1,0 +1,21 @@
+{
+  "name": "simple-device-manager",
+  "version": "1.0.0",
+  "main": "/src/index.js",
+  "repository": "git@github.com:enionsouza/simple-device-manager.git",
+  "author": "Enio N. de Souza <enionsouza@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
+}
