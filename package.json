@@ -5,10 +5,14 @@
   "repository": "git@github.com:enionsouza/simple-device-manager.git",
   "author": "Enio N. de Souza <enionsouza@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "eslint": "eslint ."
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql2": "^2.3.2",
-    "nodemon": "^2.0.14",
     "sequelize": "^6.7.0"
   },
   "devDependencies": {
@@ -16,6 +20,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "sequelize-cli": "^6.2.0"
   }
 }
