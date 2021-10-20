@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -9,16 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(128),
         allowNull: false,
+        unique: true,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
       },
     });
   },

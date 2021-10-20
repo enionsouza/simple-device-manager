@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -17,7 +18,7 @@ module.exports = {
         allowNull: false,
       },
       color: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(16),
         allowNull: false,
       },
       partNumber: {
@@ -27,10 +28,12 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
       },
     });
   },
