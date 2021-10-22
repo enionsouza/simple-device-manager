@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const express = require('express');
 const cors = require('cors');
 const db = require('./models/index');
@@ -16,11 +17,21 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-db.sequelize.sync();
+require('./routes/category.routes')(app);
+// app.use('/categories', require('./routes/category.routes'));
+
+db.sequelize.sync()
+    .then(() => console.log(`Synchronized with ${db.sequelize.models.Device.name}`))
+    .then(() => console.log(`Synchronized with ${db.sequelize.models.Category.name}`));
 
 // simple route
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to my device management web app' });
+  res.json({
+    message:
+      `Welcome to my device management back end...\
+ Here, you'll be able to access ${db.sequelize.models.Device.name} and\
+ ${db.sequelize.models.Category.name} models.`,
+  });
 });
 
 // set port, listen for requests
