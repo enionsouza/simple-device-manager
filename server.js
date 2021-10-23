@@ -18,17 +18,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 require('./routes/category.routes')(app);
-// app.use('/categories', require('./routes/category.routes'));
+require('./routes/device.routes')(app);
 
-db.sequelize.sync()
-    .then(() => console.log(`Synchronized with ${db.sequelize.models.Device.name}`))
-    .then(() => console.log(`Synchronized with ${db.sequelize.models.Category.name}`));
+db.sequelize
+  .sync()
+  .then(() =>
+    console.log(`Synchronized with ${db.sequelize.models.Device.name}`),
+  )
+  .then(() =>
+    console.log(`Synchronized with ${db.sequelize.models.Category.name}`),
+  );
 
 // simple route
 app.get('/', (req, res) => {
   res.json({
-    message:
-      `Welcome to my device management back end...\
+    message: `Welcome to my device management back end...\
  Here, you'll be able to access ${db.sequelize.models.Device.name} and\
  ${db.sequelize.models.Category.name} models.`,
   });

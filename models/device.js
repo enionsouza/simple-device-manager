@@ -1,9 +1,7 @@
 /* eslint-disable valid-jsdoc */
 /* eslint-disable require-jsdoc */
 'use strict';
-const {
-  Model,
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Device extends Model {
     /**
@@ -19,14 +17,17 @@ module.exports = (sequelize, DataTypes) => {
         },
       });
     }
-  };
-  Device.init({
-    categoryId: DataTypes.INTEGER,
-    color: DataTypes.STRING,
-    partNumber: DataTypes.INTEGER,
-  }, {
-    sequelize,
-    modelName: 'Device',
-  });
+  }
+  Device.init(
+    {
+      // categoryId: DataTypes.INTEGER,
+      color: DataTypes.STRING,
+      partNumber: DataTypes.INTEGER,
+    },
+    {
+      sequelize,
+      modelName: 'Device',
+    },
+  );
   return Device;
 };
