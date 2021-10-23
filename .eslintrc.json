@@ -9,6 +9,7 @@
   },
   "rules": {
     "object-curly-spacing": ["error", "always"],
-    "quotes": ["error"]
+    "quotes": [0],
+    "indent": [0]
   }
 }
