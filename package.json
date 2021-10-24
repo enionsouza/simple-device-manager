@@ -1,12 +1,13 @@
 {
   "name": "simple-device-manager",
   "version": "1.0.0",
-  "main": "/src/index.js",
+  "main": "sever.js",
   "repository": "git@github.com:enionsouza/simple-device-manager.git",
   "author": "Enio N. de Souza <enionsouza@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "devStart": "nodemon server.js",
     "eslint": "eslint ."
   },
   "dependencies": {
