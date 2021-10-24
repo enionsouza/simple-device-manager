@@ -29,9 +29,9 @@ This is the back-end (server side) of a simple device management web app. Device
 - MySQL (v. 8.0.27)
 - Git
 
-## Live Demo
+<!-- ## Live Demo
 
-Live demo for this project can be found in this [link](https://simple-device-manager-enionsouza.netlify.app).
+Live demo for this project can be found in this [link](https://simple-device-manager-enionsouza.netlify.app). -->
 
 ## Getting Started
 
