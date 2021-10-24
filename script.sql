@@ -1,0 +1,22 @@
+CREATE DATABASE management_db;
+
+USE management_db
+
+CREATE TABLE Categories (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(128) CHARACTER SET utf8 UNIQUE NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP
+) ENGINE=INNODB;
+
+CREATE TABLE Devices (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  color VARCHAR(16) NOT NULL,
+  partNumber INT NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP,
+  CategoryId INT NOT NULL,
+  FOREIGN KEY (CategoryId)
+        REFERENCES Categories(id)
+        ON DELETE CASCADE
+) ENGINE=INNODB;

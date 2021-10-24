@@ -1,0 +1,15 @@
+{
+  "env": {
+    "commonjs": true,
+    "node": true
+  },
+  "extends": ["google"],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "object-curly-spacing": ["error", "always"],
+    "quotes": [0],
+    "indent": [0]
+  }
+}
